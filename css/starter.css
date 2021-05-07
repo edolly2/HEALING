@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hide {
+    display: none;
+}
+
+.pick-freq {
+    display: none;
+    font-size: 2.4em;
+    font-weight: 900;
+}
+
+#freqs {
+    display: none;
+}
+
+/* MEDIA QS */
+
+@media screen and (max-width: 375px) {
+    #page {}
+
+    .main-content-frosted,
+    .main-content {
+        display: grid;
+        position: absolute;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-areas: "main""button""social";
+        width: 80vw;
+        height: 80vh;
+        /* border: 2px solid black; */
+        margin: 10vh auto;
+        border-radius: 1.2em;
+        background: inherit;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+
+    .main-content-frosted::before {
+        content: '';
+        position: absolute;
+        width: 85vw;
+        height: 85vh;
+        top: -1em;
+        left: -1em;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 100px 100px 100px 2000px rgba(255, 255, 255, 0.4);
+        filter: blur(10px);
+        background: inherit;
+    }
+
+
+
+    .main-title-cont {
+        grid-area: main;
+        text-align: center;
+        width: 100%;
+        padding: 1em 0;
+    }
+
+    .main-title {
+        font-size: 2.4em;
+        font-weight: 900;
+    }
+
+    .author-cont {
+        text-align: right;
+    }
+
+    .author {
+        font-size: 1.6em;
+        font-weight: 100;
+        padding: 0 1em;
+    }
+
+    .enter-btn-cont {
+        grid-area: button;
+        text-align: center;
+    }
+
+    .enter-btn {
+        font-size: 1.8em;
+        width: 50%;
+        border-radius: 0.4em;
+    }
+
+    .social-cont {
+        grid-area: social;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        padding: 1em 0;
+    }
+}
