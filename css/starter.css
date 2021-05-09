@@ -30,7 +30,7 @@ body {
     width: 100%;
     height: 100%;
     font-size: 62.5%;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 #page {
@@ -43,7 +43,7 @@ body {
 }
 
 header {
-    background-color: brown;
+    background-color: white;
     width: 100%;
     height: 100%;
     grid-area: header;
@@ -68,14 +68,14 @@ main {
     background-color: red;
     width: 100%;
     grid-area: main;
-    height: 100%;
+    height: auto;
 }
 
 footer {
     background-color: green;
+    /* position: fixed; */
+    /* bottom: 0; */
     width: 100%;
-
-    height: 100%;
     grid-area: footer;
 }
 
@@ -89,15 +89,12 @@ h6 {
 }
 
 .logo-cont {
-    display: flex;
+    /* display: flex; */
     /* position: absolute; */
     /* right: 5em; */
     /* top: 1em; */
-    height: 80%;
-    background-image: url('../assets/images/hare.svg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
+    /* height: 80%; */
+    
     margin-right: 2em;
     flex-grow: 1;
 }
@@ -115,15 +112,17 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     /* left: 23%; */
-    width: 100%;
+    width: 75%;
     text-align: center;
 }
 
 .head-title {
+    align-self: center;
     font-weight: 900;
     font-size: clamp(3.6em, 3.5vw, 5.2em);
+    text-decoration: underline;
 }
 
 .show-more {
@@ -146,9 +145,7 @@ h6 {
     padding: 1em 1em 0.5em 1em;
 }
 
-.fa-bars {
-    width: 1px;
-}
+
 
 ul {
     list-style: none;
@@ -167,17 +164,19 @@ ul {
 }
 
 .news-img-cont {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    border: 2px solid black;
-    width: 50%;
-    height: 50%;
+    border: 5px solid black;
+    width: auto;
+    height: auto;
 }
 
 .main-content-cont {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+    height: auto;
+    display: block;
+    text-align: center;
 }
 
 .news-article-title-cont {
@@ -194,14 +193,14 @@ ul {
 }
 
 .menu-btn-cont {
+    position: relative;
+    left: 2em;
+    z-index: 1;
 }
 
 .menu-btn {
-    position: absolute;
-    left: 3rem;
     font-size: clamp(4em, 3.5vw, 5em);
     cursor: pointer;
-    z-index: 1;
 }
 
 .side-list li {
@@ -232,4 +231,60 @@ ul {
 
 .main-contact {
     display: none;
+}
+
+.main-content-cont {
+
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.news-p-cont {
+    width: 80%;
+    text-align: left;
+    text-indent: 5em;
+}
+
+.news-p, .read-full {
+    font-size: clamp(1.2em, 1.2vw, 1.8em);
+    line-height: 1.5;
+    padding-top: 2em;
+}
+
+.read-full {
+    margin-top: 0;
+}
+.news-p {
+    margin-bottom: 0;
+}
+
+.read-full-icon-cont, .collapse-icon-cont {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.read-full, .collapse-icon-cont {
+    display: none;
+}
+
+.read-full-icon-cont p, .collapse-icon-cont p {
+    margin: 0;
+    cursor: pointer;
+    font-size: clamp(1.8em, 1.4vw, 2.2em);
+    font-weight: 900;
+}
+
+.collapse-icon-cont p {
+    margin-left: 3em;
+}
+
+
+.fa-chevron-circle-down, .fa-chevron-circle-up {
+    cursor: pointer;
 }
