@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Fair Hare</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="css/RESET.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -96,7 +97,7 @@
                             <input type="password" name="password" id="password" placeholder="********">
                             <section class="form-group">
                                 <p class="forgot-pass"><a href="#">Forget your password?</a></p>
-                                <p class="create-account"><a href="#">Create account?</a></p>
+                                <p class="create-account"><a href="#" class="create">Create account?</a></p>
                             </section>
                             <button type="submit" class="sign-in-btn">Sign-In</button>
                         </form>
@@ -104,23 +105,22 @@
 
                     <div class="sign-up-modal-cont">
                         <div class="exit-cont-2">
-                            <i class="fas fa-times-circle fa-3x exit2"></i>
+                            <i class="fas fa-times-circle fa-3x exit3"></i>
                         </div>
                         <h3 class="form-title">SIGN-UP</h3>
-                        <form action="" class="sign-up-modal">
-                            <label for="username">Username</label>
-                            <input type="text" name="username" id="username" placeholder="username">
-                            <label for="signup-email">Email</label>
-                            <input type="email" name="signup-email" id="signup-email" placeholder="example@email.com">
-                            <label for="signup-password">Password</label>
-                            <input type="password" name="signup-password" id="signup-password" placeholder="********">
-                            <label for="re-signup-password">Password</label>
-                            <input type="password" name="re-signup-password" id="re-signup-password" placeholder="********">
-                            <section class="form-group">
-                                <p class="forgot-pass"><a href="#">Forget your password?</a></p>
-                                <p class="create-account"><a href="#">Create account?</a></p>
+                        <form action="" method="" class="sign-up-modal">
+                            <label for="username">Username<span class="red">*</span></label>
+                            <input type="text" name="username" id="username" placeholder="username" required>
+                            <label for="signup-email">Email<span class="red">*</span></label>
+                            <input type="email" name="signup-email" id="signup-email" placeholder="example@email.com" required>
+                            <label for="signup-password">Password<span class="red">*</span></label>
+                            <input type="password" name="signup-password" id="signup-password" placeholder="********" required>
+                            <label for="re-signup-password">Re-type Password<span class="red">*</span></label>
+                            <input type="password" name="re-signup-password" id="re-signup-password" placeholder="********" required>
+                            <section class="form-btn-group">
+                                <button type="submit" class="sign-up-btn">Sign-Up</button>
+                                <button type="submit" class="sign-up-cancel-btn">Cancel</button>
                             </section>
-                            <button type="submit" class="sign-in-btn">Sign-In</button>
                         </form>
                     </div>
                 </div>

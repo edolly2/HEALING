@@ -5,7 +5,10 @@ var fullArticleBtn = $('.read-full-icon-cont');
 var fullArticle = $('.read-full');
 var collapseBtn = $('.collapse-icon-cont');
 var signinExit = $('.exit2');
+var signupExit = $('.exit3');
 var signinModal = $('.sign-in-modal-cont');
+var signupModal = $('.sign-up-modal-cont');
+var createAccount = $('.create');
 var profileImg = $('.profile-img-cont');
 var sideMenu = $('aside');
 var leftArrow = $('.left');
@@ -117,9 +120,19 @@ $(document).ready( () => {
     // })
 
 
-    // $(':not(aside)').on('click', () => {
-    //     $('aside').hide(1000);
-    //     $('.menu-drop').show(1000);
-    // })
+$(createAccount).on('click', () => {
+    $(signinModal).slideUp(500);
+    $(signupModal).slideDown(500);
+})
+
+$(signupExit).on('click', () => {
+    $(signupModal).slideUp(500);
+    $(sideMenu).show(500);
+})
+
+$('.sign-up-cancel-btn').on('click', () => {
+    $(signupModal).slideUp(500);
+    $(sideMenu).show(500);
+})
 });
 

@@ -25,7 +25,7 @@ img {
 
 body {
     width: 100%;
-    height: 102%;
+    height: 100%;
     font-size: 62.5%;
     overflow-y: auto;
 }
@@ -342,7 +342,9 @@ ul {
     justify-content: space-between;
 }
 
-.sign-in-btn {
+.sign-in-btn,
+.sign-up-btn,
+.sign-up-cancel-btn {
     border: 1px solid black;
     border-radius: 6px;
     padding: 1em 2em;
@@ -351,12 +353,20 @@ ul {
 }
 
 #email,
-#password {
+#password,
+#username,
+#signup-email,
+#signup-password,
+#re-signup-password {
     border-radius: 6px;
 }
 
 #email:focus,
-#password:focus {
+#password:focus,
+#username:focus,
+#signup-email:focus,
+#signup-password:focus,
+#re-signup-password:focus {
     border: 2px solid blue;
 }
 
@@ -444,4 +454,9 @@ a {
 
 .not-visible {
     visibility: hidden;
+}
+
+.sign-up-modal-cont {
+    width: 50%;
+    height: auto;
 }
