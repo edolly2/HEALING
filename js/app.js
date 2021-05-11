@@ -1,38 +1,60 @@
+var sideMenuExit = ('.exit');
+var hamburger = $('.fa-bars');
+var dash = $('.dash');
+var fullArticleBtn = $('.read-full-icon-cont');
+var fullArticle = $('.read-full');
+var collapseBtn = $('.collapse-icon-cont');
+var signinExit = $('.exit2');
+var signinModal = $('.sign-in-modal-cont');
+var profileImg = $('.profile-img-cont');
+var sideMenu = $('aside');
+
+
 $(document).ready( () => {
 
     $('.home').addClass('is-active');
     $('#home').children().show();
 
-    $('.fa-bars').on('click', () => {
-        $('aside').show(1000);
-        $('.fa-bars').hide();
+    $(hamburger).on('click', () => {
+        $(sideMenu).show(500);
+        $(hamburger).hide();
         $('.head-title').preventDefault();
     })
     
-    $('.exit').on('click', () => {
-        $('aside').hide(1000);
-        $('.fa-bars').delay(1000).fadeIn(1000);
+    $(sideMenuExit).on('click', () => {
+        $(sideMenu).hide(500);
+        $(hamburger).delay(500).fadeIn(500);
     });
 
     $('.side-list li').on('click', (event) => {
         $('.side-list li').removeClass('is-active');
-        $('.dash').hide();
+        $(dash).hide();
         $(event.currentTarget).children().show();
         $(event.currentTarget).addClass('is-active');
-        $('aside').hide(1000);
-        $('.fa-bars').delay(1000).fadeIn(1000);
+        $(sideMenu).hide(500);
+        $(hamburger).delay(500).fadeIn(500);
     });
 
-    $('.read-full-icon-cont').children().on('click', () => {
-        $('.read-full-icon-cont').hide();
-        $('.read-full').show();
-        $('.collapse-icon-cont').show();
+    $(fullArticleBtn).children().on('click', () => {
+        $(fullArticleBtn).hide();
+        $(fullArticle).slideDown(500);
+        $(collapseBtn).show();
     })
 
-    $('.collapse-icon-cont').children().on('click', () => {
-        $('.collapse-icon-cont').hide();
-        $('.read-full-icon-cont').show();
-        $('.read-full').hide();
+    $(collapseBtn).children().on('click', () => {
+        $(collapseBtn).hide();
+        $(fullArticleBtn).show();
+        $(fullArticle).slideUp(500);
+    })
+
+    $(profileImg).on('click', () => {
+        $(signinModal).slideDown(500);
+        $(sideMenu).hide(500);
+    })
+
+    $(signinExit).on('click', () => {
+        $(signinModal).slideUp(500);
+        $(sideMenu).show(500);
     })
 
     // $('.home').on('click', () => {

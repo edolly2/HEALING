@@ -23,12 +23,12 @@ img {
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 body {
     width: 100%;
-    height: 100%;
+    height: 102%;
     font-size: 62.5%;
     overflow-y: auto;
 }
@@ -50,18 +50,21 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid black;
+    padding: 2em 0;
 }
 
 aside {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
     min-width: 20vw;
-    min-height: 100vh;
+    min-height: 102%;
     grid-area: aside;
     display: none;
     position: absolute;
     top: 0;
     left: 0;
+    box-shadow: 2px 0px 3px black;
 }
 
 main {
@@ -94,7 +97,7 @@ h6 {
     /* right: 5em; */
     /* top: 1em; */
     /* height: 80%; */
-    
+
     margin-right: 2em;
     flex-grow: 1;
 }
@@ -152,6 +155,7 @@ ul {
     width: 100%;
     margin: 0;
     text-align: center;
+    height: 100vh;
 }
 
 .sub-title-cont {
@@ -167,7 +171,7 @@ ul {
     display: flex;
     justify-content: center;
     text-align: center;
-    border: 5px solid black;
+    border: 5px solid white;
     width: auto;
     height: auto;
 }
@@ -203,10 +207,9 @@ ul {
     cursor: pointer;
 }
 
-.side-list li {
+.side-list li,
+.aside-btn-group {
     font-size: clamp(1.6em, 1.3vw, 2.2em);
-    /* padding-bottom: 1em; */
-    /* background-color: black; */
     width: 75%;
     margin-left: 13%;
     border-radius: 0.6em;
@@ -215,11 +218,11 @@ ul {
 }
 
 .side-list li:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .is-active {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     color: yellow;
 
 }
@@ -233,13 +236,19 @@ ul {
     display: none;
 }
 
-.main-content-cont {
-
-}
+.main-content-cont {}
 
 .wrapper {
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.wrapper2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
 }
@@ -250,7 +259,8 @@ ul {
     text-indent: 5em;
 }
 
-.news-p, .read-full {
+.news-p,
+.read-full {
     font-size: clamp(1.2em, 1.2vw, 1.8em);
     line-height: 1.5;
     padding-top: 2em;
@@ -259,21 +269,26 @@ ul {
 .read-full {
     margin-top: 0;
 }
+
 .news-p {
     margin-bottom: 0;
+    padding-top: 0;
 }
 
-.read-full-icon-cont, .collapse-icon-cont {
+.read-full-icon-cont,
+.collapse-icon-cont {
     display: block;
     text-align: center;
     width: 100%;
 }
 
-.read-full, .collapse-icon-cont {
+.read-full,
+.collapse-icon-cont {
     display: none;
 }
 
-.read-full-icon-cont p, .collapse-icon-cont p {
+.read-full-icon-cont p,
+.collapse-icon-cont p {
     margin: 0;
     cursor: pointer;
     font-size: clamp(1.8em, 1.4vw, 2.2em);
@@ -285,6 +300,76 @@ ul {
 }
 
 
-.fa-chevron-circle-down, .fa-chevron-circle-up {
+.fa-angle-double-down,
+.fa-angle-double-up {
     cursor: pointer;
+}
+
+.profile-img-cont {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.not-signed-in {
+    color: black;
+}
+
+.profile-img {
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    padding: 0.7rem;
+}
+
+.sign-in-modal-cont {
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 6px;
+    border: 2px solid black;
+    display: none;
+}
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-in-btn {
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-size: clamp(1.2em, 1vw, 1.6em);
+}
+
+#email, #password {
+    border-radius: 6px;
+}
+
+.exit-cont-2 {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+}
+
+.exit2 {
+    cursor: pointer;
+}
+
+.news-img-cont {
+    margin-bottom: 2em;
+}
+
+.border-top {
+    border-top: 2px solid black;
+}
+
+.news-p-cont {
+    border-top: 2px solid black;
 }
