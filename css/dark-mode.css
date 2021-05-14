@@ -1,0 +1,88 @@
+header {
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+
+.head-title {
+    color: blue;
+    text-shadow: 2px 2px 2px white, -2px 2px 2px white, 2px -2px 2px white, 1px 2px 2px white, 2px 1px 2px white, -1px 2px 2px white, 2px -1px 2px white, 1px -2px 2px white, -2px 1px 2px white, -1px -2px 2px white, -2px -1px 2px white, 1px 1px 2px white, -1px -1px 2px white, -1px 1px 2px white, 1px -1px 2px white, 0px 2px 2px white, 2px 0px 2px white, -2px 0px 2px white, 0px -2px 2px white, 0px 1px 2px white, 1px 0px 2px white, 0px -1px 2px white, -1px 0px 2px white, 0px 0px 2px white, 5px 5px 10px white;
+}
+
+main {
+    background-color: rgb(41, 41, 41);
+}
+
+aside {
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 0px 3px white;
+}
+
+.profile-img {
+    color: black;
+    background-color: white;
+}
+
+.not-signed-in {
+    color: white;
+}
+
+.side-list li {
+    color: white;
+}
+
+.exit {
+    color: white;
+}
+
+.news-article-title {
+    color: white;
+}
+
+.news-p, .read-full {
+    color: white;
+}
+
+.sign-in-btn,
+.sign-up-btn,
+.sign-up-cancel-btn {
+    border: 1px solid white;
+}
+
+.sign-in-modal-cont,
+.sign-up-modal-cont {
+    background-color: rgb(41, 41, 41);
+    border: 2px solid white;
+    color: white;
+}
+
+.border-top {
+    border-top: 2px solid white;
+}
+
+.d-mode {
+    color: white;
+}
+
+.border-btm {
+    border-bottom: 2px solid white;
+}
+
+.news-p-cont {
+    border-top: 2px solid white;
+}
+
+.slides {
+    border: 2px solid white;
+}
+
+a {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+button {
+    color: white;
+}
